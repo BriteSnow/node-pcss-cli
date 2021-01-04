@@ -1,0 +1,26 @@
+# By Default, Ignore any .  Mac stuff
+.*
+
+# Except .gitgnore
+!.gitignore
+
+# Ignore dist
+dist/
+
+# Ignore Nodejs modules
+node_modules/
+
+test/samples/sample-sketch/
+
+# Safeguards
+*.tgz
+*.zip
+
+# Safeguards (for no web/ui projects)
+*.png
+*.jpeg
+*.jpg
+*.sketch
+
+# Ignore vscode
+.vscode
