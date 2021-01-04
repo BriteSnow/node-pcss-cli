@@ -1,0 +1,60 @@
+{
+  "name": "pcss-cli",
+  "version": "0.1.0",
+  "description": "config.js driven postcss cli",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BriteSnow/node-pcss-cli.git"
+  },
+  "keyword": [
+    "postcss",
+    "cli",
+    "rollup"
+  ],
+  "dependencies": {
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/minimist": "^1.2.1",
+    "chokidar": "^3.4.3",
+    "fs-extra-plus": "^0.5.20",
+    "lodash.debounce": "^4.0.8",
+    "minimist": "^1.2.5",
+    "utils-min": "^0.1.17"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.0.4",
+    "autoprefixer": "^10.1.0",
+    "execa": "^5.0.0",
+    "mocha": "^8.2.1",
+    "postcss": "^8.2.2",
+    "postcss-import": "^14.0.0",
+    "postcss-mixins": "^7.0.2",
+    "postcss-nested": "^5.0.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "bin": {
+    "pcss": "./dist/bin-pcss.js"
+  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "test": "TS_NODE_FILES=true ./node_modules/.bin/mocha -p ./test/tsconfig.json ./test/src/*.spec.ts",
+    "testw": "TS_NODE_FILES=true ./node_modules/.bin/mocha -p ./test/tsconfig.json ./test/src/*.spec.ts --watch --watch-files './test/**/*.ts','./src/**/*.ts'",
+    "prepack": "node_modules/.bin/rimraf ./dist && ./node_modules/.bin/tsc"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "author": "Jeremy Chone <jeremy.chone@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BriteSnow/pcss-cli/issues"
+  }
+}
