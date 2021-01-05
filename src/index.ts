@@ -19,7 +19,8 @@ export async function processConfigEntry(config: ProcessConfig) {
 	try {
 		const outDir = Path.dirname(output);
 		await mkdirs(outDir);
-		await saferRemove([output, mapFile]);
+
+		await saferRemove([output, mapFile], './');
 
 		const processor = postcss(plugins);
 		const pcssNodes = [];

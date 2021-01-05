@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as chokidar from 'chokidar';
 import { pathExists } from 'fs-extra-plus';
 import debounce from 'lodash.debounce';
