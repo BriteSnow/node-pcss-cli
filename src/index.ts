@@ -1,4 +1,4 @@
-import { glob, mkdirs, readFile, saferRemove, writeFile } from 'fs-extra-plus';
+import { glob, mkdirs, pathExists, readFile, unlink, writeFile } from 'fs-extra-plus';
 import * as Path from 'path';
 import postcss, { AcceptedPlugin } from 'postcss';
 
@@ -20,7 +20,12 @@ export async function processConfigEntry(config: ProcessConfig) {
 		const outDir = Path.dirname(output);
 		await mkdirs(outDir);
 
-		await saferRemove([output, mapFile], './');
+		if (await pathExists(output)) {
+			await unlink(output);
+		}
+		if (await pathExists(mapFile)) {
+			await unlink(mapFile);
+		}
 
 		const processor = postcss(plugins);
 		const pcssNodes = [];
