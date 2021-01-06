@@ -54,11 +54,11 @@ Run
 
 ```sh
 # will use pcss.config.js
-node ./node_module/.bin/pcss-cli
+node ./node_module/.bin/pcss
 
 # will use path/to/pcss.config.js, relative input/output path will be relative to path/to/
-node ./node_module/.bin/pcss-cli -c path/to/pcss.config.js
+node ./node_module/.bin/pcss -c path/to/pcss.config.js
 
 # will do watch mode
-node ./node_module/.bin/pcss-cli -w -c path/to/pcss.config.js
+node ./node_module/.bin/pcss -w -c path/to/pcss.config.js
 ```

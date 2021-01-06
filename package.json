@@ -1,6 +1,6 @@
 {
   "name": "pcss-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "config.js driven postcss cli",
   "main": "dist/index.js",
   "repository": {
@@ -15,7 +15,7 @@
   "dependencies": {
     "@types/lodash.debounce": "^4.0.6",
     "@types/minimist": "^1.2.1",
-    "chokidar": "^3.4.3",
+    "chokidar": "^3.5.0",
     "fs-extra-plus": "^0.5.20",
     "lodash.debounce": "^4.0.8",
     "minimist": "^1.2.5",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@types/mocha": "^8.0.4",
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^10.2.0",
     "execa": "^5.0.0",
     "mocha": "^8.2.1",
     "postcss": "^8.2.2",
