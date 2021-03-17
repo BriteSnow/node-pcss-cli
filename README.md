@@ -2,7 +2,7 @@
 
 This is a config driven (i.e., `pcss.config.js`) post css cli similar to `rollup.config.js`. 
 
-If you are looking for the [official postcss-cli](https://www.npmjs.com/package/postcss-cli)
+The [official postcss-cli](https://www.npmjs.com/package/postcss-cli) takes a more command line driven approach, which is fine, but might not be suitable for some build workflows. 
 
 ## Usage
 
