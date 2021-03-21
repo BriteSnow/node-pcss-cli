@@ -71,6 +71,9 @@ async function parseConfFile(confFile: string): Promise<PcssConfigEntry[]> {
 	for (const entry of entries) {
 		entry.output = resolveEntryPath(entry.output)
 		entry.input = asArray(entry.input).map(resolveEntryPath);
+		if (entry.watchPath) {
+			entry.watchPath = asArray(entry.watchPath).map(resolveEntryPath);
+		}
 	}
 
 	return entries;

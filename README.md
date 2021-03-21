@@ -25,6 +25,7 @@ npm install postcss-import postcss-mixins postcss-nested
 Create a **pcss.config.js**
 
 
+
 ```js
 const plugins = [
 	require("autoprefixer"),
@@ -33,6 +34,7 @@ const plugins = [
 	require("postcss-nested")
 ];
 
+// NOTE: Paths are relative to the pcss.config.js, not to cwd
 module.exports = {
 	// required. Support single string, or array, will be processed in order
 	input: ['./pcss/main.pcss', './src/**/*.pcss'], 
