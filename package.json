@@ -1,6 +1,6 @@
 {
   "name": "pcss-cli",
-  "version": "0.1.5-SNAPSHOT",
+  "version": "0.1.5",
   "description": "config.js driven postcss cli",
   "main": "dist/index.js",
   "repository": {
@@ -20,7 +20,7 @@
     "utils-min": "^0.1.18"
   },
   "peerDependencies": {
-    "postcss": "^8.2.2"
+    "postcss": "^8.2.8"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.6",
@@ -34,7 +34,7 @@
     "postcss-mixins": "^7.0.3",
     "postcss-nested": "^5.0.5",
     "rimraf": "^3.0.2",
-    "ts-node": "^9.0.0",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
   "bin": {
