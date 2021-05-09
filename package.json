@@ -1,6 +1,6 @@
 {
   "name": "pcss-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "config.js driven postcss cli",
   "main": "dist/index.js",
   "repository": {
@@ -20,7 +20,7 @@
     "utils-min": "^0.1.18"
   },
   "peerDependencies": {
-    "postcss": "^8.2.8"
+    "postcss": "^8.2.14"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.6",
@@ -28,14 +28,14 @@
     "@types/mocha": "^8.2.2",
     "autoprefixer": "^10.2.5",
     "execa": "^5.0.0",
-    "mocha": "^8.3.2",
-    "postcss": "^8.2.8",
-    "postcss-import": "^14.0.0",
+    "mocha": "^8.4.0",
+    "postcss": "^8.2.14",
+    "postcss-import": "^14.0.1",
     "postcss-mixins": "^7.0.3",
     "postcss-nested": "^5.0.5",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.4"
   },
   "bin": {
     "pcss": "./dist/bin-pcss.js"
