@@ -12,19 +12,13 @@ The [official postcss-cli](https://www.npmjs.com/package/postcss-cli) takes a mo
 
 
 ```sh
-# peer dependency, must be installed
-npm install -D postcss 
-
 # Install the pcss-cli
 npm install -D pcss-cli
-
-# Install any postcss plugins (for example)
-npm install postcss-import postcss-mixins postcss-nested
 ```
 
 Create a **pcss.config.js**
 
-
+> Note: autoprefixer, postcss-import, postcss-mixins, and postcss-nested are imported by default (so, you can just add the requires as below)
 
 ```js
 const plugins = [
