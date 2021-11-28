@@ -4,12 +4,13 @@ This is a config driven (i.e., `pcss.config.js`) post css cli similar to `rollup
 
 The [official postcss-cli](https://www.npmjs.com/package/postcss-cli) takes a more command line driven approach, which is fine, but might not be suitable for some build workflows. 
 
+> Note: Requires `package.json` `"type": "module"`
+
 ## Usage
 
-- Default to `pcss.config.js`
+- Default to `pcss.config.js` (Must be esm)
 - `-c` to specify custom config file. All input/output path will be relative to the targeted config file. 
 - `-w` to specify watch mode. 
-
 
 ```sh
 # Install the pcss-cli
@@ -21,15 +22,18 @@ Create a **pcss.config.js**
 > Note: autoprefixer, postcss-import, postcss-mixins, and postcss-nested are imported by default (so, you can just add the requires as below)
 
 ```js
+const prefixer = (await import('autoprefixer')).default;
+const nested = (await import('postcss-nested')).default;
+const importer = (await import('postcss-import')).default;
+
 const plugins = [
-	require("autoprefixer"),
-	require("postcss-import"),
-	require("postcss-mixins"),
-	require("postcss-nested")
+	prefixer,
+	importer,
+	nested
 ];
 
 // NOTE: Paths are relative to the pcss.config.js, not to cwd
-module.exports = {
+export default {
 	// required. Support single string, or array, will be processed in order
 	input: ['./pcss/main.pcss', './src/**/*.pcss'], 
 

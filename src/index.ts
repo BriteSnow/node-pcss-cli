@@ -1,6 +1,7 @@
-import { glob, mkdirs, pathExists, readFile, unlink, writeFile } from 'fs-extra-plus';
+import { glob } from 'fs-extra-plus';
 import * as Path from 'path';
 import postcss, { AcceptedPlugin } from 'postcss';
+const { readFile, mkdirs, pathExists, unlink, writeFile } = (await import('fs-extra')).default;
 
 
 

@@ -1,8 +1,7 @@
  {
 	"compilerOptions": {
-		"target": "ES2019",
-
-		"module": "commonjs",
+		"target": "ES2021",
+		"module": "ESNext",
 
 		"moduleResolution": "node", 
 		
@@ -17,8 +16,7 @@
 
 		"baseUrl": ".",
 		
-		"experimentalDecorators": true,
-				
+		"experimentalDecorators": true,				
 		"esModuleInterop": true
 	},
 

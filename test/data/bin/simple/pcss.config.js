@@ -1,11 +1,15 @@
+const prefixer = (await import('autoprefixer')).default;
+const nested = (await import('postcss-nested')).default;
+const importer = (await import('postcss-import')).default;
+
 const plugins = [
-	require("autoprefixer"),
-	require("postcss-import"),
-	require("postcss-mixins"),
-	require("postcss-nested")
+	prefixer,
+	importer,
+	nested
 ];
 
-module.exports = {
+
+export default {
 	// required. Support single string, or array, will be processed in order
 	input: ['./pcss/**/*.pcss'],
 

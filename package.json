@@ -1,6 +1,7 @@
 {
   "name": "pcss-cli",
-  "version": "0.1.8",
+  "type": "module",
+  "version": "0.2.0-SNAPSHOT",
   "description": "config.js driven postcss cli",
   "main": "dist/index.js",
   "repository": {
@@ -13,26 +14,27 @@
     "rollup"
   ],
   "dependencies": {
+    "autoprefixer": "^10.4.0",
     "chokidar": "^3.5.2",
-    "fs-extra-plus": "^0.5.22",
+    "fs-extra-plus": "^0.5.23",
     "lodash.debounce": "^4.0.8",
     "minimist": "^1.2.5",
-    "utils-min": "^0.1.18",
-    "postcss": "^8.3.6",
-    "autoprefixer": "^10.3.1",
+    "postcss": "^8.4.4",
     "postcss-import": "^14.0.2",
     "postcss-mixins": "^8.1.0",
-    "postcss-nested": "^5.0.5"
+    "postcss-nested": "^5.0.6",
+    "utils-min": "^0.1.18"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.6",
     "@types/minimist": "^1.2.2",
     "@types/mocha": "^9.0.0",
-    "execa": "^5.1.1",
-    "mocha": "^9.0.3",
+    "@types/postcss-import": "^14.0.0",
+    "execa": "^6.0.0",
+    "mocha": "^9.1.3",
     "rimraf": "^3.0.2",
-    "ts-node": "^10.1.0",
-    "typescript": "^4.3.5"
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "bin": {
     "pcss": "./dist/bin-pcss.js"
@@ -42,7 +44,7 @@
     "dist/"
   ],
   "scripts": {
-    "test": "TS_NODE_FILES=true ./node_modules/.bin/mocha -p ./test/tsconfig.json ./test/src/*.spec.ts",
+    "test": "TS_NODE_PROJECT='test/tsconfig.json' ./node_modules/.bin/mocha",
     "testw": "TS_NODE_FILES=true ./node_modules/.bin/mocha -p ./test/tsconfig.json ./test/src/*.spec.ts --watch --watch-files './test/**/*.ts','./src/**/*.ts'",
     "prepack": "node_modules/.bin/rimraf ./dist && ./node_modules/.bin/tsc"
   },

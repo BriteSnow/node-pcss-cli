@@ -4,11 +4,8 @@
 
  {
 	"compilerOptions": {
-		// Good for nodejs 14+
-		"target": "es2019",
-
-		// For now, static with commonjs.
-		"module": "commonjs",
+		"target": "ES2021",
+		"module": "ESNext",
 
 		// This is important to support 3rd party modules that are still in a node.js/commonjs way
 		"moduleResolution": "node", 

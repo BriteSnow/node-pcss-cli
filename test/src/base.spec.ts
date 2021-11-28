@@ -1,10 +1,14 @@
 import * as Path from 'path';
-import { processConfigEntry } from '../../src';
+import { processConfigEntry } from '../../src/index.js';
+
+const prefixer = (await import('autoprefixer')).default;
+const nested = (await import('postcss-nested')).default;
 
 const plugins = [
-	require("postcss-nested"),
-	require("autoprefixer"),
+	nested,
+	prefixer,
 ];
+
 
 describe('base', async function () {
 

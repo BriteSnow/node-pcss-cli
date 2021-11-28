@@ -6,7 +6,7 @@ import debounce from 'lodash.debounce';
 import minimist, { ParsedArgs } from 'minimist';
 import * as Path from 'path';
 import { asArray, deepClone } from 'utils-min';
-import { ProcessConfig, processConfigEntry } from '.';
+import { ProcessConfig, processConfigEntry } from './index.js';
 
 
 const argv = minimist(process.argv.slice(2), { '--': true });
@@ -52,13 +52,12 @@ async function parseConfFile(confFile: string): Promise<PcssConfigEntry[]> {
 		throw new Error(`ERROR - pcss-cli - Cannot find file ${confFile}`);
 	}
 
-	// load the file object
-	const confModulePath = Path.relative(__dirname, confFile);
-	const confFileObj = await require(confModulePath);
+	// resolve from pwd
+	const confModulePath = Path.resolve(confFile);
+	const confFileObj = await import(confModulePath);
+	const confDir = Path.dirname(confModulePath);
 
-	const confDir = Path.dirname(confFile);
-
-	const confFileEntries = asArray(confFileObj);
+	const confFileEntries = asArray(confFileObj.default);
 
 	assertConfigEntries(confFileEntries);
 
