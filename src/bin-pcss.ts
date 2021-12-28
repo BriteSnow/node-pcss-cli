@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import * as chokidar from 'chokidar';
-import { pathExists } from 'fs-extra-plus';
+import { pathExists } from 'fs-extra';
 import debounce from 'lodash.debounce';
 import minimist, { ParsedArgs } from 'minimist';
 import * as Path from 'path';
