@@ -18,9 +18,9 @@
     "chokidar": "^3.5.3",
     "fs-extra-plus": "^0.6.0",
     "lodash.debounce": "^4.0.8",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "postcss": "^8.4.12",
-    "postcss-import": "^14.0.2",
+    "postcss-import": "^14.1.0",
     "postcss-mixins": "^9.0.2",
     "postcss-nested": "^5.0.6",
     "utils-min": "^0.2.0"
