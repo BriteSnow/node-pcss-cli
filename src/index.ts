@@ -1,9 +1,7 @@
-import { glob } from 'fs-extra-plus';
+import { glob, pathExists } from 'fs-aux';
+import { mkdir, readFile, unlink, writeFile } from 'fs/promises';
 import * as Path from 'path';
 import postcss, { AcceptedPlugin } from 'postcss';
-const { readFile, mkdirs, pathExists, unlink, writeFile } = (await import('fs-extra')).default;
-
-
 
 export interface ProcessConfig {
 	input: string | string[];
@@ -19,7 +17,7 @@ export async function processConfigEntry(config: ProcessConfig) {
 	let pcssResult: any;
 	try {
 		const outDir = Path.dirname(output);
-		await mkdirs(outDir);
+		await mkdir(outDir, { recursive: true });
 
 		if (await pathExists(output)) {
 			await unlink(output);
