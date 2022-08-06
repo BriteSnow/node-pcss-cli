@@ -1,0 +1,28 @@
+ {
+	"compilerOptions": {
+		"target": "ES2021",
+		"module": "ESNext",
+
+		"moduleResolution": "node", 
+		
+		"strict": true,
+
+		"allowJs": false,
+		"checkJs": false,
+
+		"sourceMap": true,
+
+		"outDir": "./.out/",
+
+		"baseUrl": "../",
+		
+		"experimentalDecorators": true,				
+		"esModuleInterop": true
+	},
+
+	"exclude": [
+		"node_modules",
+		"services",
+		".rpt2_cache" 
+	]
+}
