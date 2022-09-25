@@ -4,6 +4,7 @@ import * as chokidar from 'chokidar';
 import { pathExists } from 'fs-aux';
 import debounce from 'lodash.debounce';
 import minimist, { ParsedArgs } from 'minimist';
+import { pathToFileURL } from 'node:url';
 import * as Path from 'path';
 import { asArray, deepClone } from 'utils-min';
 import { ProcessConfig, processConfigEntry } from './index.js';
@@ -54,7 +55,8 @@ async function parseConfFile(confFile: string): Promise<PcssConfigEntry[]> {
 
 	// resolve from pwd
 	const confModulePath = Path.resolve(confFile);
-	const confFileObj = await import(confModulePath);
+	const confModulePathUrl = pathToFileURL(confModulePath).toString()
+	const confFileObj = await import(confModulePathUrl);
 	const confDir = Path.dirname(confModulePath);
 
 	const confFileEntries = asArray(confFileObj.default);

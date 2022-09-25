@@ -18,7 +18,7 @@
     "prepack": "node_modules/.bin/rimraf ./dist && ./node_modules/.bin/tsc"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.11",
+    "autoprefixer": "^10.4.12",
     "chokidar": "^3.5.3",
     "fs-aux": "^0.1.1",
     "lodash.debounce": "^4.0.8",

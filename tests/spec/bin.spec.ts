@@ -21,6 +21,8 @@ describe('bin', async function () {
 
 
 	it('bin-simple', async function () {
+		this.timeout(5000);
+
 		const confFile = 'tests/data/bin/simple/pcss.config.js';
 
 		// TS_NODE_PROJECT="./tsconfig.json" node --loader ts-node/esm src/bin-pcss.ts -c test/data/bin/simple/pcss.config.js
