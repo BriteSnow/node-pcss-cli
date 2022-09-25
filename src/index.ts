@@ -78,7 +78,15 @@ async function resolveGlobs(globs: string | string[]) {
 		const lists: string[][] = [];
 		for (const globStr of globs) {
 			const list = await glob(globStr);
-			lists.push(list);
+
+			// NOTE: On Windows, seems that a fastGlob (used by fs-aux.glob) return empty when the globStr is a normal 
+			//       path. So, handling the case below to put the original path as is if empty is returned. 
+			// TODO: Eventually needs to investigate the exact behavior of fastGlob (in fs-aux)
+			if (list.length == 0) {
+				lists.push([globStr]);
+			} else {
+				lists.push(list);
+			}
 		}
 		return lists.flat();
 	}
