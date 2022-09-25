@@ -1,7 +1,7 @@
 {
   "name": "pcss-cli",
   "type": "module",
-  "version": "0.2.8-SNAPSHOT",
+  "version": "0.2.8",
   "description": "config.js driven postcss cli",
   "main": "dist/index.js",
   "repository": {
