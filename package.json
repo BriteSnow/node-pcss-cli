@@ -1,7 +1,7 @@
 {
   "name": "pcss-cli",
   "type": "module",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "config.js driven postcss cli",
   "main": "dist/index.js",
   "repository": {
@@ -18,27 +18,27 @@
     "prepack": "node_modules/.bin/rimraf ./dist && ./node_modules/.bin/tsc"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.14",
     "chokidar": "^3.5.3",
     "fs-aux": "^0.1.1",
     "lodash.debounce": "^4.0.8",
-    "minimist": "^1.2.6",
-    "postcss": "^8.4.16",
-    "postcss-import": "^15.0.0",
+    "minimist": "^1.2.8",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
     "postcss-mixins": "^9.0.4",
-    "postcss-nested": "^5.0.6",
+    "postcss-nested": "^6.0.1",
     "utils-min": "^0.2.1"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.7",
     "@types/minimist": "^1.2.2",
-    "@types/mocha": "^9.1.1",
+    "@types/mocha": "^10.0.1",
     "@types/postcss-import": "^14.0.0",
-    "execa": "^6.1.0",
-    "mocha": "^10.0.0",
-    "rimraf": "^3.0.2",
+    "execa": "^7.0.0",
+    "mocha": "^10.2.0",
+    "rimraf": "^4.4.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.8.3"
+    "typescript": "^4.9.5"
   },
   "bin": {
     "pcss": "./dist/bin-pcss.js"
@@ -48,7 +48,7 @@
     "dist/"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=16.0.0"
   },
   "author": "Jeremy Chone <jeremy.chone@gmail.com>",
   "license": "MIT",
